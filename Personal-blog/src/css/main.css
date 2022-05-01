@@ -6,7 +6,7 @@
     flex: 1 auto;
     margin: 0 auto;
     padding: 40px 15px;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
 }
 
@@ -138,10 +138,12 @@
 }
 
     /* 文章样式 */
-
-.layout>div:first-child{
+    .layout .recent-posts{
+        width: 74%;
+    }
+/* .layout>div:first-child{
     width: 74%;
-}
+} */
 
     /* 文章卡片 */
 #recent-posts>.recent-post-item{
@@ -151,6 +153,7 @@
     height: 18em;
     border-radius: 8px;
     background: #fff;
+    flex-direction: row;
 }
     /* 文章图片 */
 #recent-posts>.recent-post-item .post_cover{

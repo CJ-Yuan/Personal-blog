@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #toTop{
+            position: fixed;
+            bottom: 100px;
+            right: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 要获取当前页面的滚动条纵坐标位置，用：
+        document.documentElement.scrollTop;
+        而不是：
+        document.body.scrollTop;
+
+        documentElement 对应的是 html 标签，而 body 对应的是 body 标签 -->
+    <div id="toTop">
+        <a href="javascript:goToTop()">返回顶部</a>
+    </div>
+    <script>
+        var div = document.getElementById("toTop");
+        document.body.onscroll = function(){
+            var heightTop = document.documentElement.scrollTop;
+            if(heightTop > 500){
+                console.log(heightTop)
+                div.style.display = "block";
+                //document.documentElement.scrollTop = 0;
+            }else{
+                console.log(heightTop)
+                div.style.display = "none";
+            }
+
+            div.onclick = function(){
+                document.documentElement.scrollTop = 0;
+            }
+            function goToTop(){
+                
+            }
+        }
+    </script>
+</body>
+</html>

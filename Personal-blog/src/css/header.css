@@ -11,12 +11,24 @@
     background-position:center center;
     background-position-x: center;
     background-position-y:center ;
+    animation: dhl 1s;
 }
 
 /* 导航栏 */
 #nav.show{
     opacity: 1;
     filter: node;
+    animation: dhl 1s;
+}
+
+/*头部区域和导航栏动画  */
+@keyframes dhl{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 #nav{
@@ -145,7 +157,21 @@
     padding: 0 10px;
     width: 100%;
 }
-    /* 网站名称 */
+/* 网站名称 */
+#page-header #site-info #site-title{
+        animation: Blog 2s ;
+}
+/* 网站名称的动画 */
+@keyframes Blog{
+    0%{
+        font-size:1.5em
+    }
+    100%{
+        font-size: 2.85em;
+    }
+}
+
+/* 网站字幕 */
 #page-header #site-title,#page-header #site-subtitle{
     margin: 0;
     text-align: center;
@@ -155,9 +181,8 @@
     font-size: 2.85em;
 }
 
-/* 网站字幕 */
 #page-header #site-subtitle{
-    font-size: 1.5em;
+        font-size: 1.5em;
 }
 
 /* 向下滚动 */
