@@ -1,0 +1,94 @@
+/* 移动端侧边栏样式 */
+/* 画布 */
+
+#sidebar #menu-mask{
+    position: fixed;
+    z-index: 102;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes to_show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        filter: none;
+    }
+}
+
+/* 个人信息 */
+#sidebar #sidebar-menus.open{
+    transform: translate3d(-100%,0,0);
+}
+#sidebar #sidebar-menus{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 103;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 300px;
+    height: 100%;
+    background: #f6f8fa;
+    transition: all 0.5s;
+}
+
+    /* 头像 */
+#sidebar #sidebar-menus>.avatar-img{
+    margin: 20px auto;
+}
+
+    /* 数据 */
+#sidebar #sidebar-menus .site-data{
+    display: table;
+    padding: 0 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+#sidebar #sidebar-menus .site-data .data-item{
+    display: table-cell;
+}
+#sidebar #sidebar-menus .site-data .data-item .headline{
+    color: #4c4948;
+}
+#sidebar #sidebar-menus .site-data .data-item .length-num{
+    color: #1f2d3d;
+    font-size: 1.28em;
+}
+
+/* 分割线 */
+#sidebar #sidebar-menus hr{
+    margin: 20px auto;
+}
+
+/* 分类 */
+#sidebar #sidebar-menus .menus_items{
+    padding: 0 10px 40px;
+}
+#sidebar #sidebar-menus .menus_items .site-page{
+    position: relative;
+    display: block;
+    padding: 6px 30px 6px 22px;
+    color: #4c4948;
+    font-size: 1.15em;
+}
+#sidebar #sidebar-menus .menus_items .menus_item_child{
+    margin: 0;
+}
+/* 隐藏二级菜单 */
+#sidebar #sidebar-menus .menus_items .menus_item.hide>ul{
+    display: none;
+}
+
+/* 二级目录 */
+#sidebar #sidebar-menus .menus_items .menus_item .menus_item_child li:hover{
+        background-color: #80c8f8;
+}
+
+#sidebar #sidebar-menus .menus_items .menus_item.hide:hover>ul{
+    display: block;
+}

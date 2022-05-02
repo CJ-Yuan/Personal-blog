@@ -5,14 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="stylesheet" type="text/css" href="../css//header.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/Top-button.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/font_vrx7l3qddmo/iconfont.css">
+    <link rel="stylesheet" href="../css/home/footer.css">
+    <link rel="stylesheet" href="../css/home/header.css">
+    <link rel="stylesheet" href="../css/home/main.css">
+    <link rel="stylesheet" href="../css/home/Top-button.css">
+    <link rel="stylesheet" href="../css/home/sidebar.css">
+    <link rel="stylesheet" href="../css/home/media.css">
+    
 </head>
 <body>
+    <!-- 移动端个人信息 -->
+    <div id="sidebar" style="display: none;">
+        <!-- 画布 -->
+        <div id="menu-mask" style="display: block; animation: 0.5s ease 0s 1 normal none running to_show;"></div>
+        <!-- 个人信息 -->
+        <div id="sidebar-menus" class="open">
+            <!-- 头像 -->
+            <div class="avatar-img is-center">
+                <img src="../images/头像.jpg" alt="">
+            </div>
+            <!-- 数据信息 -->
+            <div class="site-data is-center">
+                <!-- 文章 -->
+                <div class="data-item">
+                    <a href="#">
+                        <div class="headline">文章</div>
+                        <div class="length-num">2</div>
+                    </a>
+                </div>
+                <div class="data-item">
+                    <a href="#">
+                        <div class="headline">标签</div>
+                        <div class="length-num">3</div>
+                    </a>
+                </div>
+                <div class="data-item">
+                    <a href="#">
+                        <div class="headline">分类</div>
+                        <div class="length-num">4</div>
+                    </a>
+                </div>
+            </div>
+            <!-- 分割线 -->
+            <hr>
+            <!-- 分类 -->
+            <div class="menus_items">
+                <!-- 首页 -->
+                <div class="menus_item">
+                    <a class="site-page" href="">
+                        <i class="iconfont icon-icon-test2"></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <!-- 目录 -->
+                <div id="catalogue" class="menus_item hide">
+                    <a class="site-page group" href="#">
+                        <i class="iconfont icon-icon-test14"></i>
+                        <span>目錄</span>
+                        <i class="iconfont icon-icon-test32"></i>
+                    </a>
+                    <!-- 目錄下的二級目錄 -->
+                    <ul class="menus_item_child" style="padding-left: 40px;">
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- 文档 -->
+                 <div id="catalogue" class="menus_item hide">
+                    <a class="site-page group" href="#">
+                        <i class="iconfont icon-icon-test4"></i>
+                        <span>文档</span>
+                        <i class="iconfont icon-icon-test32"></i>
+                    </a>
+                    <!-- 目錄下的二級目錄 -->
+                    <ul class="menus_item_child" style="padding-left: 40px;">
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 娱乐 -->
+                <div id="catalogue" class="menus_item hide">
+                    <a class="site-page group" href="#">
+                        <i class="iconfont icon-icon-test7"></i>
+                        <span>娱乐</span>
+                        <i class="iconfont icon-icon-test32"></i>
+                    </a>
+                    <!-- 目錄下的二級目錄 -->
+                    <ul class="menus_item_child" style="padding-left: 40px;">
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="site-page child" href="">
+                                <i class=""></i>
+                                <span>测试2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 留言板 -->
+                <div class="menus_item">
+                    <a class="site-page" href="">
+                        <i class="iconfont icon-icon-test2"></i>
+                            <span>留言板</span>
+                    </a>
+                </div>
+                <!-- 关于 -->
+                <div class="menus_item">
+                    <a class="site-page" href="">
+                        <i class="iconfont icon-icon-test2"></i>
+                        <span>關於</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 页面布局 -->
     <div class="page" id="body-wrap">
         <!-- 头部区域 -->
@@ -35,7 +167,7 @@
                     <div class="menus_items">
                         <!-- 首页 -->
                         <div class="menus_item">
-                            <a class="site-page group" href="./home.html">
+                            <a class="site-page group" href="">
                                 <i class="iconfont icon-icon-test2" ></i>
                                 <span>首頁</span>
                             </a>
@@ -58,7 +190,7 @@
                                 <li>
                                     <a class="" href="">
                                         <i class=""></i>
-                                        <span>演示1</span>
+                                        <span>演示2</span>
                                     </a>
                                 </li>
                             </ul>
@@ -75,7 +207,13 @@
                                 <li>
                                     <a class="" href="">
                                         <i class=""></i>
-                                        <span>1</span>
+                                        <span>演示1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="" href="">
+                                        <i class=""></i>
+                                        <span>演示2</span>
                                     </a>
                                 </li>
                             </ul>
@@ -112,6 +250,11 @@
                             </a>
                         </div>
 
+                    </div>
+                    <div id="toggle-menu">
+                        <a class="site-page" href="javascript:void(0)">
+                            <i class="iconfont icon-fenlei"></i>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -475,6 +618,7 @@
         </button>
     </div>
 </body>
-<script src="../js/Dynamic-font.js"></script>
-<script src="../js/Click-event.js"></script>
+<script src="../js/home/Click-event.js"></script>
+<script src="../js/home/Dynamic-font.js"></script>
+<script src="../js/home/media.js"></script>
 </html>

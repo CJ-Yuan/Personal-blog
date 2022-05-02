@@ -1,0 +1,28 @@
+/* 移动端样式 */
+@media screen and (max-width: 768px){
+    /* 网站名称 */
+    #page-header #site-info #site-title{
+        font-size: 1.85em;
+    }
+    /* 网站字幕 */
+    #page-header #site-info #site-subtitle{
+        font-size: 1.15em;
+    }
+
+    /* 隐藏搜索 */
+    #page-header #nav #menus #search-button .site-page.group>span{
+        display: none;
+    }
+    /* 导航栏 菜单 */
+    #page-header #nav #menus .menus_items{
+        display: none;
+    }
+
+    #page-header #nav #menus #toggle-menu{
+        display: inline-block;
+    }
+    #page-header #nav #menus #search-button .site-page.group>i,
+    #page-header #nav #menus #toggle-menu .site-page>i{
+        font-size: 35px;
+    }
+}
