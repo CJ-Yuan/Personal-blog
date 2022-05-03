@@ -210,9 +210,9 @@
     cursor: pointer;
 }
 #page-header #scroll-down .icon-img{
-    position: relative;
-    left: 50%;
-    width: 100%;
+        /* position: relative;
+        left: 50%;
+        width: 100%; */
     
     font-size: 60px;
     text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);

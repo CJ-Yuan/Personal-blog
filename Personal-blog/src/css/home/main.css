@@ -103,6 +103,26 @@
     padding-left: 20px;
     font-size: 30px;
 }
+    /* 联系方式 */
+#body-wrap #content-inner #aside-content .card-info .card-info-social-icons{
+    display: flex;
+    justify-content: center;
+}
+
+#content-inner #aside-content .card-info .card-info-social-icons .contact-information:hover>.contact{
+    display: block;
+}
+#aside-content .card-info .card-info-social-icons .contact-information>.contact{
+    display: none;
+    width: 200px;
+    height: 200px;
+}
+#body-wrap #content-inner #aside-content .card-info .card-info-social-icons .contact-information .contact img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
     /* 公告卡片 */
     /* 沒什麼好寫的 */

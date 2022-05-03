@@ -44,12 +44,13 @@ var drop = () => {
     // 获取当前可视高度
     let a =  document.documentElement.clientHeight;
     window.scrollBy(0,20)
-    let scrolldelay = setTimeout('drop()',10);
+    let scrolldelay = setTimeout('drop()',1);
     let sTop = document.documentElement.scrollTop;
     if(sTop >= a) clearTimeout(scrolldelay);
 }
 
-// 
+
+//移动端 菜单栏
 let menus = document.getElementById('toggle-menu');
     menus.onclick = ()=>{
         let mask = document.getElementById('sidebar');

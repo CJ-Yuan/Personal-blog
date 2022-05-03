@@ -1,5 +1,6 @@
-/* 移动端样式 */
+/* HOME 移动端样式 */
 @media screen and (max-width: 768px){
+    /* 头部区域 */
     /* 网站名称 */
     #page-header #site-info #site-title{
         font-size: 1.85em;
@@ -13,6 +14,7 @@
     #page-header #nav #menus #search-button .site-page.group>span{
         display: none;
     }
+
     /* 导航栏 菜单 */
     #page-header #nav #menus .menus_items{
         display: none;
@@ -24,5 +26,22 @@
     #page-header #nav #menus #search-button .site-page.group>i,
     #page-header #nav #menus #toggle-menu .site-page>i{
         font-size: 35px;
+    }
+
+    /* 内容区域 */
+        /* 旁白内容 */
+    #content-inner #aside-content{
+        display: none;
+    }
+        /* 文章内容 */
+    #content-inner #recent-posts{
+        width: 100%;
+    }
+     /* 隐藏文章图片 */
+    #content-inner #recent-posts .post_cover{
+        display: none;
+    }
+    #content-inner #recent-posts .recent-post-info{
+        width: 100%;
     }
 }
