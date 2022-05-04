@@ -62,3 +62,16 @@ let menusk = document.getElementById('menu-mask');
         let mask = document.getElementById('sidebar');
         mask.style.display="none"
 }
+
+
+// 封装一个快速绑定的点击事件
+const addEvent = (dom,handler)=>{
+    // 判断当前是否是移动端，绑定合适的单击事件
+    if(window.screen.width > 768){
+        //为dom绑定click事件
+        dom.addEventListener('click',handler,false)
+    }else{
+        dom.addEventListener('touchend', handler, false)
+    }
+}
+
