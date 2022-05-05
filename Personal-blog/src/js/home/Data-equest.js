@@ -1,15 +1,13 @@
-getData('/src/json/article.json',function(data){
+getData('../../json/article.json',function(data){
     var data = JSON.parse(data)
     var html = ''
     var len=data.length;
-    console.log(data);
     //通过遍历得到的数据，生成html
     // for(var i = 0; i<len;i++){
     //     // console.log('1');
     //     console.log(data[1])
     // }
     for(var i =0; i<len; i++){
-        console.log(data[i])
         if( i%2 == 0){
             html += `<div class="recent-post-item">
             <div class="post_cover left">
