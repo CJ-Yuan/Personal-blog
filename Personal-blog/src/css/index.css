@@ -76,7 +76,6 @@ html {
 
 /* 整個頁面背景圖片樣式 */
 .page{
-    background-image: url('../images/bj2.jpg');
     background-attachment: fixed;
     background-size: cover;
     position: relative;

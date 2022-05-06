@@ -1,0 +1,152 @@
+/* 导航栏 */
+#nav.show{
+    opacity: 1;
+    filter: node;
+    animation: dhl 1s;
+}
+
+/*头部区域和导航栏动画  */
+@keyframes dhl{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#nav{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 36px;
+    font-size: 1.3em;
+
+}
+/* 导航栏名字 */
+#nav #blog_name{
+    box-flex:1;
+    flex: 1;
+}
+
+#nav #site-name{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#nav a{
+    color: #eee;
+}
+/* 导航栏目录 */
+    /* 搜索 */
+#nav #search-button{
+    display: inline;
+    padding: 0 0 0 14px;
+}
+
+    /* 菜单 */
+#nav .site-page{
+    position: relative;
+    padding-bottom: 6px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0 / 30%);
+    font-size: .78em;
+    cursor: pointer;
+}
+#nav .fa-search{
+    width: 200px;
+    height: 200px;
+    background-size:contain;
+}
+#nav .menus_items{
+    display: inline;
+}
+#nav .menus_items .menus_item{
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 14px;
+}
+
+/* 下划线动画 */
+#nav .group{
+    position: relative;
+}
+
+#nav .group::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: rgb(9, 141, 211);
+    transition: all 0.3s ease-in-out;
+}
+#nav .group:hover::after{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+/* 图标动画  不会做暂留*/
+#nav .menus_items .menus_item>a>i:last-child{
+    padding: 5px;
+    transform:rotate(180deg);
+    transition: transform 0.3s;
+}
+
+/* 二级目录 */
+    /* ul */
+#nav .menus_items .menus_item .menus_item_child{
+    position: absolute;
+    right: 0;
+    display: none;
+    margin-top: 8px;
+    padding: 0;
+    width: max-content;
+    background-color:#f6f8fa;
+    border-radius: 5px;
+}
+/* li */
+#nav .menus_items .menus_item .menus_item_child li{
+    border-radius: 5px 5px 0 0;
+}
+#nav .menus_items .menus_item .menus_item_child li a{
+    display: inline-block;
+    padding: 8px 16px;
+    width: 100%;
+    color: black;
+    text-shadow: none!important;
+}
+#nav .menus_items .menus_item .menus_item_child li:hover{
+    background-color: #80c8f8;
+}
+#nav .menus_items .menus_item:hover>ul:nth-child(2){
+    display: block;
+}
+#nav .menus_items .menus_item:hover>ul:nth-child(3){
+    display: block;
+}
+#nav .menus_items .menus_item:hover>ul:nth-child(4){
+    display: block;
+}
+
+/* 导航栏滑出，滑进时可视区域时的动画 */
+#page-header.nav-fixed #nav{
+    position: fixed;
+    top: -60px;
+    z-index: 91;
+    background: rgba(255, 255, 255, 255);
+    box-sizing: 0 5xp 6px -5px rgb(133 133 133 / 60%);
+    transition: transform 0.2 ease-in-out,opacity 0.2s ease-in-out;
+}
+
+/* 移动端目录 */
+#nav #menus #toggle-menu{
+    display: none;
+    padding: 2px 0 0 6px;
+    vertical-align: top;
+}

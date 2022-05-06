@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../css/font_vrx7l3qddmo/iconfont.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/Nav.css">
+    <link rel="stylesheet" href="../css/search/searchpage.css">
+</head>
+<body>
+    <div id="web_bg"></div>
+    <div class="page" id="body-wrap1">
+        <!-- 头部区域 -->
+        <header id="body-header1">
+            <!-- 导航栏 -->
+            <nav id="nav" class="show">
+                <!-- 名字 -->
+                <span id="blog_name"><a id="site-name" href="#">CJY</a></span>
+                <!-- 菜单 -->
+                <div id="menus">
+                    <!-- 搜索按钮 -->
+                    <div id="search-button">
+                        <a class="site-page group" href="#">
+                            <!-- 图标 -->
+                           <i class="iconfont icon-icon-test5"></i>
+                           <span>搜索</span>
+                        </a>
+                    </div>
+                    <!-- 菜单和菜单项 -->
+                    <div class="menus_items">
+                        <!-- 首页 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="../index.html">
+                                <i class="iconfont icon-icon-test2" ></i>
+                                <span>首页</span>
+                            </a>
+                        </div>
+                        <!-- 目录 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="#">
+                                <i class="iconfont icon-icon-test14"></i>
+                                <span>目录</span>
+                                <i class="iconfont icon-icon-test32"></i>
+                            </a>
+                            <!-- 目錄下的二級目錄 -->
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="" href="">
+                                        <i class=""></i>
+                                        <span>演示1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="" href="">
+                                        <i class=""></i>
+                                        <span>演示2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 文档 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="#">
+                                <i class="iconfont icon-icon-test4"></i>
+                                <span>文档</span>
+                                <i class="iconfont icon-icon-test32"></i>
+                            </a>
+                            <!-- 文檔下的二級目錄 -->
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="" href="">
+                                        <i class=""></i>
+                                        <span>演示1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="" href="">
+                                        <i class=""></i>
+                                        <span>演示2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 娱乐 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="#">
+                                <i class="iconfont icon-icon-test7"></i>
+                                <span>娱乐</span>
+                                <i class="iconfont icon-icon-test32"></i>
+                            </a>
+                            <!-- 娛樂下的二級文檔 -->
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="" href="../五子棋/五子棋.html">
+                                        <i class=""></i>
+                                        <span>五子棋</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 留言板 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="#">
+                                <i class="iconfont icon-icon-test"></i>
+                                <span>留言板</span>
+                            </a>
+                        </div>
+                        <!-- 关于 -->
+                        <div class="menus_item">
+                            <a class="site-page group" href="#">
+                                <i class="iconfont icon-icon-test20"></i>
+                                <span>关于</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div id="toggle-menu">
+                        <a class="site-page" href="javascript:void(0)">
+                            <i class="iconfont icon-fenlei"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 内容区域 -->
+            <!-- 搜索框 -->
+        <main class="search" id="search">
+            <div class="search-titm">
+                <span class="Search-box">
+                    <input id="yuan1" type="text">
+                    <ul id="yuan2"></ul>
+                </span>
+                <span class="Search-button">
+                    <input type="submit" value="搜索">
+                </span>
+            </div>
+        </main>
+        <!--  -->
+    </div>
+    <script>
+        var oInput = document.getElementById('yuan1'),
+            oUl = document.getElementById('yuan2');
+        oInput.oninput = function(){
+            var value = this.value;
+            var oScript = document.createElement('script');
+            oScript.src = 'https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=1458,21097,30186,29568,29700,29221&wd='+ value +'&cb=doJson';
+            document.body.appendChild(oScript);
+        }
+
+        function doJson(data){
+            var g = data.g,
+            str = '';
+            if(g){
+                g.forEach(function(ele, index){
+                //console.log(ele.q);
+                //var q = ele.q;
+                str += '<li><a href = https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=' + ele.q + '>' + ele.q + '</a></li>'
+                })
+                oUl.innerHTML = str;
+                oUl.style.display = 'block';
+            }else{
+                oUl.style.display = 'none';
+            }
+            
+        }
+    </script>
+</body>
+</html>

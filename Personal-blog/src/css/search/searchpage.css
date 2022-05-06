@@ -1,0 +1,96 @@
+/* 背景图片 */
+body{
+        width: 100%;
+        height: 100%;
+}
+#web_bg{
+        /* 定位：固定 */
+        position: fixed;
+        /* 层叠 */
+        z-index: -999;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/bj.jpg");
+        /* 表示背景相对于元素的内容固定。 */
+        background-attachment: local;
+        /* 设置初始位置居中 */
+        background-position: center;
+        /* 设置背景图片完全覆盖背景区 */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+/* 页面布局 */
+#body-wrap1{
+        width: 100%;
+        height: 100vh;
+}
+/* 头部区域 */
+#body-header1{
+        width: 100%;
+        height: 30%;
+        display: block;
+        position: relative;
+}
+
+
+
+/* <!-- 内容区域 --> */
+#search{
+        width: 100%;
+        height: 30%;
+        position: relative;
+        text-align: center;
+}
+
+#search .search-titm{
+        position: relative;
+}
+#search .search-titm .Search-box{
+        position: relative;
+}
+#search .search-titm .Search-box>input{
+        width: 443px;
+        height: 50px;
+        padding: 12px 16px;
+        font-size: 16px;
+        margin: 0;
+        border-radius:10px 0 0 10px;
+        color: #222;
+        opacity: 0.5;
+}
+#search .search-titm .Search-box>ul{
+        position: absolute;
+        display: block;
+        left: 0%;
+        padding: 0;
+        width: 443px;
+        background-color:#f6f8fa;
+        border-radius: 5px;
+        border:2px solid #4E6EF2!important;
+}
+#search .search-titm .Search-box>ul>li:hover{
+        background: #ddd;
+}
+#search .search-titm .Search-box>ul>li>a{
+        font-size: 14px;
+        color: #000;
+        margin: 5px;
+}
+
+
+#search .search-titm .Search-button{
+        position: relative;
+        width: 546px;
+}
+#search .search-titm .Search-button>input{
+        cursor: pointer;
+        width: 108px;
+        height: 50px;
+        line-height: 45px;
+        padding: 0;
+        background-color: #4e63f2;
+        border-radius:0 10px 10px 0;
+        font-size: 17px;
+        color: #fff;
+        margin: 0;
+}

@@ -1,0 +1,417 @@
+/* 首页头部区域的样式 */
+#page-header.full_page{
+    width: 100%;
+    height: 100vh;
+    /* 背景图片自适应 */
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    /* 背景图片定位 */
+    background-position:center center;
+    background-position-x: center;
+    background-position-y:center ;
+    animation: dhl 1s;
+}
+
+
+/* #page-header #nav.hide-menu #menus #toggle-menu{
+    display: inline-block;
+} */
+/* 信息 */
+#body-wrap .full_page #site-info{
+    position: absolute;
+    top: 43%;
+    padding: 0 10px;
+    width: 100%;
+}
+/* 网站名称 */
+#page-header #site-info #site-title{
+    margin: 0;
+    font-size: 2.85em;
+    animation: Blog 2s ;
+}
+@media screen and (max-width: 768px){
+    #page-header #site-info #site-title{
+        font-size: 1.85em;
+    }
+}
+/* 网站名称的动画 */
+@keyframes Blog{
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 网站字幕 */
+#page-header #site-title,#page-header #site-subtitle{
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
+    line-height: 1.5;
+    color: #fff;
+    
+}
+
+#page-header #site-subtitle{
+        font-size: 1.72em;
+}
+
+/* 向下滚动 */
+#page-header #scroll-down{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+}
+#page-header #scroll-down .icon-img{
+        /* position: relative;
+        left: 50%;
+        width: 100%; */
+    
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
+    line-height: 1.5;
+    /* 开启动画 */
+    animation:icon-img 1s infinite;    
+} 
+    /* 向下滚动图标动画 */
+@keyframes icon-img{
+    0%{
+        top: 0;
+        opacity: 0.4;
+    }
+    50%{
+        top: -16px;
+        opacity: 1;
+        filter: none;
+    }
+    100%{
+        top: 0;
+        opacity: 0.4;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 首页内容区域的样式 */
+.layout{
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 auto;
+    margin: 0 auto;
+    padding: 40px 15px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* 旁白内容 */
+#aside-content{
+    padding-right: 15px;
+    width: 26%;
+}
+    /* 旁白内容的通用样式 */
+#aside-content .card-widget{
+    border-radius: 8px;
+    background: #fff;
+    margin-top: 20px;
+    box-sizing: 0 3px 8px 6px rgba(7,17,27,0.05);
+    padding: 20px 24px;
+}
+
+#aside-content>.card-widget:first-child{
+    margin-top: 0;
+}
+    /* 信息卡片样式 */
+        /* 个人资料 */
+#aside-content .card-info{
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 20px 24px;
+    
+}
+        /* 头像 */
+.is-center{
+    text-align: center;
+}
+.avatar-img{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 70px;
+}
+
+.avatar-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+        /* 姓名 */
+#aside-content .card-info .author-info__name{
+    font-weight: 500;
+    font-size: 1.57em;
+    text-align: center;
+    line-height: 70px;
+}
+        /* 简介 */
+.author-info__description{
+    margin-top: -0.42em;
+}
+
+    /* 数据 */
+#aside-content .card-info .card-info-data{
+        display: table;
+        margin: 14px 0.4px;
+        width: 100%;
+        table-layout: fixed;
+}
+#aside-content .card-info .card-info-data>.card-info-data-item{
+    display: table-cell;
+}
+#aside-content .card-info .card-info-data>.card-info-data-item a .headline{
+    color: #4c4948;
+    font-size: 1em;
+}
+#aside-content .card-info .card-info-data>.card-info-data-item a .length-num{
+    margin-top: 0.42em;
+    color: #4c4948;
+    font-size: 1.4em;
+}
+
+    /* GitHub主页 */
+#aside-content .card-info #card-info-btn{
+    display: block;
+    margin-top: 14px;
+    background-color: #49b1f5;
+    color: #fff;
+    text-align: center;
+    line-height: 2.4;
+}
+#aside-content .card-info #card-info-btn span{
+    padding-left: 10px;
+}
+
+    /* 图标 */
+#aside-content .card-info .card-info-social-icons .icon-img{
+    padding-left: 20px;
+    font-size: 30px;
+}
+    /* 联系方式 */
+#body-wrap #content-inner #aside-content .card-info .card-info-social-icons{
+    display: flex;
+    justify-content: center;
+}
+
+#content-inner #aside-content .card-info .card-info-social-icons .contact-information:hover>.contact{
+    display: block;
+}
+#aside-content .card-info .card-info-social-icons .contact-information>.contact{
+    display: none;
+    width: 200px;
+    height: 200px;
+}
+#body-wrap #content-inner #aside-content .card-info .card-info-social-icons .contact-information .contact img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+    /* 公告卡片 */
+    /* 沒什麼好寫的 */
+
+    /* 分類卡片 */
+#aside-content .item-headline{
+    padding-bottom: 6px;
+    font-size: 1.2em;
+}
+#aside-content .item-headline span{
+    margin-left: 6px;
+}
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a{
+    display: flex;
+    flex-direction: row;
+    padding: 3px 10px;
+    color: #4c4948;
+    transition: all 0.4s;
+}
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span:first-child{
+    -webkit-box-flex:1;
+    flex: 1;
+}
+#aside-content .card-categories ul.card-category-list>.card-category-list-item:hover{
+    background: #49b1f5;
+    font-size: 20px;
+}
+
+    /* 標籤卡片 */
+#aside-content .card-tag-cloud a{
+    display: inline-block;
+    padding: 0 4px;
+}
+
+    /* 文章样式 */
+    .layout .recent-posts{
+        width: 74%;
+    }
+/* .layout>div:first-child{
+    width: 74%;
+} */
+
+    /* 文章卡片 */
+#recent-posts>.recent-post-item{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 18em;
+    border-radius: 8px;
+    background: #fff;
+    flex-direction: row;
+    
+}
+    /* 阴影 */
+#recent-posts>.recent-post-item:hover{
+    box-shadow: 10px 10px 5px #888888;
+}
+    /* 文章图片 */
+#recent-posts>.recent-post-item .post_cover{
+    overflow: hidden;
+    width: 44%;
+    height: 100%;
+}
+#recent-posts>.recent-post-item .post_cover img.post_bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 500ms linear;
+}
+    /* 图片放大效果动画 */
+#recent-posts>.recent-post-item:hover>.post_cover img.post_bg{
+        /* 设置图片按照比例放大1.2倍 */
+        transform: scale(1.2); 
+        transition: all 500ms linear;
+}
+
+    /* 文章介绍 */
+#recent-posts>.recent-post-item>.recent-post-info{
+    padding: 0 40px;
+    width: 57%;
+}
+#recent-posts>.recent-post-item>.recent-post-info>.article-title,
+#recent-posts>.recent-post-item>.recent-post-info>.content
+{
+    /* 防止溢出 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient:vertical;
+    color: #1f2d3d;
+    font-size: 1.72em;
+    line-height: 1.4;
+}
+    /* <!-- 文章发布信息等 --> */
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap{
+    margin: 6px 0;
+    color: #858585;
+    font-size: 90%;
+}
+    /* 发布时间 */
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.post-meta-date{
+    cursor: default;
+}
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap 
+.article-meta-label{
+    padding-right: 4px;
+}
+    /* 文章类型 文章评论*/
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap 
+    .article-meta-separator{
+        margin: 0 6px;
+}
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap i{
+    margin: 0 4px 0 0;
+}
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a{
+    color: #858585;
+}
+
+    /* 文章介绍 */
+#recent-posts>.recent-post-item>.recent-post-info>.content{
+    -webkit-line-clamp: 2;
+}
+#recent-posts>.recent-post-item:not(:first-child){
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 尾部区域的样式 */
+
+#footer{
+    position: relative;
+    background: #49b1f5;
+    background-attachment: scroll;
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+}
+
+#footer-wrap{
+    position: relative;
+    padding: 40px 20px;
+    color: #eee;
+    text-align: center;
+}
